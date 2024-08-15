@@ -14,7 +14,7 @@ func main() {
 // v1
 func sol1() string {
 	s, sep := "", ""
-	for _, arg := range os.Args[0:] {
+	for _, arg := range os.Args {
 		s += sep + arg
 		sep = " "
 	}
@@ -23,5 +23,5 @@ func sol1() string {
 
 // v2
 func sol2() string {
-	return strings.Join(os.Args[0:], " ")
+	return strings.Join(os.Args, " ")
 }
