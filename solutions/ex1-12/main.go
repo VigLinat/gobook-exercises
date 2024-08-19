@@ -24,8 +24,7 @@ const (
 func main() {
 	if len(os.Args) > 1 && os.Args[1] == "web" {
 		http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-			var err error
-			if err = r.ParseForm(); err != nil {
+			if err := r.ParseForm(); err != nil {
 				fmt.Fprintf(os.Stderr, "Error while parsing form: %v", err)
 				lissajous(w)
 				return
