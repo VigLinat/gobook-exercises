@@ -7,7 +7,7 @@ import (
 	"io"
 	"log"
 	"math"
-	"math/rand/v2"
+	"math/rand"
 	"net/http"
 	"os"
 )
